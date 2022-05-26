@@ -1,0 +1,12 @@
+<div class="container" >
+  <h1><%= @article.title %> <%= link_to '<i class="fa-solid fa-trash-can"></i>'.html_safe, article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></h1>
+
+  <p><%= @article.content %></p>
+
+  <%= link_to "Update article", edit_article_path(@article) %>
+  <br>
+  <%= link_to "< Back", articles_path %>
+  <br>
+</div>
